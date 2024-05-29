@@ -139,8 +139,11 @@ namespace PingTester
                             responseCount++;
 
                             double averageResponseTime = totalResponseTime / responseCount; // Calcula el promedio
-
-                            Console.WriteLine($"To: {serverToPing} Response: {responseTime}ms Average: {averageResponseTime}ms");
+                            Console.WriteLine($"To: {serverToPing} Response time: {responseTime}ms");
+                        }
+                        else if (line.Contains("Request timed out"))
+                        {
+                            Console.WriteLine($"Packet lost, request timed out.");
                         }
                     }
 
@@ -163,17 +166,17 @@ namespace PingTester
 
                 if (packetLossPercentage < perfectThreshold)
                 {
-                    Console.WriteLine("Perfect connectivity");
+                    // Console.WriteLine("Perfect connectivity");
                     trayIcon.Icon = Properties.Resources.Perfect;
                 }
                 else if (packetLossPercentage < goodThreshold)
                 {
-                    Console.WriteLine("Good connectivity");
+                    // Console.WriteLine("Good connectivity");
                     trayIcon.Icon = Properties.Resources.Good;
                 }
                 else if (packetLossPercentage < mediumThreshold)
                 {
-                    Console.WriteLine("Medium connectivity");
+                    // Console.WriteLine("Medium connectivity");
                     trayIcon.Icon = Properties.Resources.Medium;
                 }
                 else
