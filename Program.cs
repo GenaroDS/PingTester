@@ -40,6 +40,7 @@ namespace PingTester
 
         static void SetInitialTooltip(Settings settings)
         {
+            
             int pingCount = settings.PingCount;
             double secondsBetweenPings = settings.SecondsBetweenPings;
             int maxResponseTime = settings.MaxResponseTime;
@@ -118,11 +119,31 @@ namespace PingTester
                     };
 
                     process.Start();
+
                     string output = process.StandardOutput.ReadToEnd();
                     process.WaitForExit();
 
-                    Console.WriteLine($"Pinging to: {serverToPing}");
-                    Console.WriteLine($"{output}");
+                    string[] lines = output.Split('\n'); // Dividir la salida en líneas
+                    double totalResponseTime = 0;
+                    int responseCount = 0;
+
+                    foreach (string line in lines)
+                    {
+                        if (line.Contains("time="))
+                        {
+                            int timeIndex = line.IndexOf("time=") + 5;
+                            int msIndex = line.IndexOf("ms");
+                            string responseTimeString = line.Substring(timeIndex, msIndex - timeIndex).Trim();
+                            double responseTime = double.Parse(responseTimeString); // Convierte el tiempo de respuesta a double
+                            totalResponseTime += responseTime;
+                            responseCount++;
+
+                            double averageResponseTime = totalResponseTime / responseCount; // Calcula el promedio
+
+                            Console.WriteLine($"To: {serverToPing} Response: {responseTime}ms Average: {averageResponseTime}ms");
+                        }
+                    }
+
 
                     var match = responseTimePattern.Match(output);
                     if (match.Success)
