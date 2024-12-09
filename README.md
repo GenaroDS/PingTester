@@ -15,6 +15,9 @@ Colors represent different packet loss percentages: blue (<9%), green (<18%), ye
 Through the settings window, you can customize each threshold to your preference.  
 The clock icon appears initially, awaiting results.
 
+<img src="Screenshots/Parameters.png" alt="Parameters">&nbsp;&nbsp;
+<img src="Screenshots/Console.png" alt="Console">
+
 ## Installation
 
 1. Download the .exe from the [Releases](https://github.com/GenaroDS/PingTester.NET/releases/tag/exe) section.
