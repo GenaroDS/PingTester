@@ -25,8 +25,9 @@ namespace PingTester
             trayIcon.ContextMenuStrip = new ContextMenuStrip();
             trayIcon.ContextMenuStrip.Renderer = new DarkModeRenderer();
             trayIcon.ContextMenuStrip.ShowImageMargin = false;
-            trayIcon.ContextMenuStrip.Items.Add("Like the app? Buy me a coffee!", null, onCoffeeClick);
             trayIcon.ContextMenuStrip.Items.Add("Settings", null, onSettingsClick);
+            trayIcon.ContextMenuStrip.Items.Add("Like the app? Buy me a coffee!", null, onCoffeeClick);
+            
 
             trayIcon.ContextMenuStrip.Items.Add(new ToolStripSeparator());
             trayIcon.ContextMenuStrip.Items.Add("Exit", null, OnExitClick);

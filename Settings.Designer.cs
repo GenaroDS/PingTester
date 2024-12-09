@@ -70,11 +70,11 @@ namespace SettingsWindow
             // pingCountLabel
             // 
             pingCountLabel.AutoSize = true;
-            pingCountLabel.Font = new Font("Microsoft JhengHei UI", 9.75F);
+            pingCountLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             pingCountLabel.ForeColor = SystemColors.Control;
             pingCountLabel.Location = new Point(12, 47);
             pingCountLabel.Name = "pingCountLabel";
-            pingCountLabel.Size = new Size(76, 17);
+            pingCountLabel.Size = new Size(77, 17);
             pingCountLabel.TabIndex = 1;
             pingCountLabel.Text = "Ping count:";
             pingCountLabel.Click += pingCountLabel_Click;
@@ -83,7 +83,7 @@ namespace SettingsWindow
             // 
             pingCountTextBox.BackColor = Color.FromArgb(52, 54, 56);
             pingCountTextBox.BorderStyle = BorderStyle.FixedSingle;
-            pingCountTextBox.ForeColor = SystemColors.InactiveCaption;
+            pingCountTextBox.ForeColor = Color.WhiteSmoke;
             pingCountTextBox.Location = new Point(181, 44);
             pingCountTextBox.Name = "pingCountTextBox";
             pingCountTextBox.Size = new Size(129, 23);
@@ -93,11 +93,11 @@ namespace SettingsWindow
             // secondsBetweenPingsLabel
             // 
             secondsBetweenPingsLabel.AutoSize = true;
-            secondsBetweenPingsLabel.Font = new Font("Microsoft JhengHei UI", 9.75F);
+            secondsBetweenPingsLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             secondsBetweenPingsLabel.ForeColor = SystemColors.Control;
             secondsBetweenPingsLabel.Location = new Point(12, 79);
             secondsBetweenPingsLabel.Name = "secondsBetweenPingsLabel";
-            secondsBetweenPingsLabel.Size = new Size(130, 17);
+            secondsBetweenPingsLabel.Size = new Size(132, 17);
             secondsBetweenPingsLabel.TabIndex = 3;
             secondsBetweenPingsLabel.Text = "Seconds in between:";
             secondsBetweenPingsLabel.Click += secondsBetweenPingsLabel_Click;
@@ -106,7 +106,7 @@ namespace SettingsWindow
             // 
             secondsBetweenPingsTextBox.BackColor = Color.FromArgb(52, 54, 56);
             secondsBetweenPingsTextBox.BorderStyle = BorderStyle.FixedSingle;
-            secondsBetweenPingsTextBox.ForeColor = SystemColors.InactiveCaption;
+            secondsBetweenPingsTextBox.ForeColor = Color.WhiteSmoke;
             secondsBetweenPingsTextBox.Location = new Point(181, 76);
             secondsBetweenPingsTextBox.Name = "secondsBetweenPingsTextBox";
             secondsBetweenPingsTextBox.Size = new Size(129, 23);
@@ -115,11 +115,11 @@ namespace SettingsWindow
             // maxResponseTimeLabel
             // 
             maxResponseTimeLabel.AutoSize = true;
-            maxResponseTimeLabel.Font = new Font("Microsoft JhengHei UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            maxResponseTimeLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             maxResponseTimeLabel.ForeColor = SystemColors.Control;
             maxResponseTimeLabel.Location = new Point(12, 113);
             maxResponseTimeLabel.Name = "maxResponseTimeLabel";
-            maxResponseTimeLabel.Size = new Size(125, 17);
+            maxResponseTimeLabel.Size = new Size(127, 17);
             maxResponseTimeLabel.TabIndex = 5;
             maxResponseTimeLabel.Text = "Max response time:";
             // 
@@ -127,7 +127,7 @@ namespace SettingsWindow
             // 
             maxResponseTimeTextBox.BackColor = Color.FromArgb(52, 54, 56);
             maxResponseTimeTextBox.BorderStyle = BorderStyle.FixedSingle;
-            maxResponseTimeTextBox.ForeColor = SystemColors.InactiveCaption;
+            maxResponseTimeTextBox.ForeColor = Color.WhiteSmoke;
             maxResponseTimeTextBox.Location = new Point(181, 110);
             maxResponseTimeTextBox.Name = "maxResponseTimeTextBox";
             maxResponseTimeTextBox.Size = new Size(129, 23);
@@ -136,22 +136,22 @@ namespace SettingsWindow
             // serverToPingLabel
             // 
             serverToPingLabel.AutoSize = true;
-            serverToPingLabel.Font = new Font("Microsoft JhengHei UI", 9.75F);
+            serverToPingLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             serverToPingLabel.ForeColor = SystemColors.Control;
             serverToPingLabel.Location = new Point(12, 147);
             serverToPingLabel.Name = "serverToPingLabel";
-            serverToPingLabel.Size = new Size(95, 17);
+            serverToPingLabel.Size = new Size(98, 17);
             serverToPingLabel.TabIndex = 7;
             serverToPingLabel.Text = "Server to ping:";
             // 
             // perfectThresholdLabel
             // 
             perfectThresholdLabel.AutoSize = true;
-            perfectThresholdLabel.Font = new Font("Microsoft JhengHei UI", 9.75F);
+            perfectThresholdLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             perfectThresholdLabel.ForeColor = SystemColors.Control;
             perfectThresholdLabel.Location = new Point(12, 181);
             perfectThresholdLabel.Name = "perfectThresholdLabel";
-            perfectThresholdLabel.Size = new Size(114, 17);
+            perfectThresholdLabel.Size = new Size(115, 17);
             perfectThresholdLabel.TabIndex = 9;
             perfectThresholdLabel.Text = "Perfect threshold:";
             // 
@@ -159,7 +159,7 @@ namespace SettingsWindow
             // 
             perfectThresholdTextBox.BackColor = Color.FromArgb(52, 54, 56);
             perfectThresholdTextBox.BorderStyle = BorderStyle.FixedSingle;
-            perfectThresholdTextBox.ForeColor = SystemColors.InactiveCaption;
+            perfectThresholdTextBox.ForeColor = Color.WhiteSmoke;
             perfectThresholdTextBox.Location = new Point(181, 178);
             perfectThresholdTextBox.Name = "perfectThresholdTextBox";
             perfectThresholdTextBox.Size = new Size(129, 23);
@@ -168,7 +168,7 @@ namespace SettingsWindow
             // goodThresholdLabel
             // 
             goodThresholdLabel.AutoSize = true;
-            goodThresholdLabel.Font = new Font("Microsoft JhengHei UI", 9.75F);
+            goodThresholdLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             goodThresholdLabel.ForeColor = SystemColors.Control;
             goodThresholdLabel.Location = new Point(12, 215);
             goodThresholdLabel.Name = "goodThresholdLabel";
@@ -180,7 +180,7 @@ namespace SettingsWindow
             // 
             goodThresholdTextBox.BackColor = Color.FromArgb(52, 54, 56);
             goodThresholdTextBox.BorderStyle = BorderStyle.FixedSingle;
-            goodThresholdTextBox.ForeColor = SystemColors.InactiveCaption;
+            goodThresholdTextBox.ForeColor = Color.WhiteSmoke;
             goodThresholdTextBox.Location = new Point(181, 212);
             goodThresholdTextBox.Name = "goodThresholdTextBox";
             goodThresholdTextBox.Size = new Size(129, 23);
@@ -189,7 +189,7 @@ namespace SettingsWindow
             // mediumThresholdLabel
             // 
             mediumThresholdLabel.AutoSize = true;
-            mediumThresholdLabel.Font = new Font("Microsoft JhengHei UI", 9.75F);
+            mediumThresholdLabel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold);
             mediumThresholdLabel.ForeColor = SystemColors.Control;
             mediumThresholdLabel.Location = new Point(12, 249);
             mediumThresholdLabel.Name = "mediumThresholdLabel";
@@ -201,7 +201,7 @@ namespace SettingsWindow
             // 
             mediumThresholdTextBox.BackColor = Color.FromArgb(52, 54, 56);
             mediumThresholdTextBox.BorderStyle = BorderStyle.FixedSingle;
-            mediumThresholdTextBox.ForeColor = SystemColors.InactiveCaption;
+            mediumThresholdTextBox.ForeColor = Color.WhiteSmoke;
             mediumThresholdTextBox.Location = new Point(181, 246);
             mediumThresholdTextBox.Name = "mediumThresholdTextBox";
             mediumThresholdTextBox.Size = new Size(129, 23);
@@ -211,8 +211,8 @@ namespace SettingsWindow
             // 
             applyChangesButton.BackColor = Color.FromArgb(31, 106, 165);
             applyChangesButton.FlatStyle = FlatStyle.Popup;
-            applyChangesButton.Font = new Font("Microsoft JhengHei UI", 9F);
-            applyChangesButton.ForeColor = SystemColors.Control;
+            applyChangesButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            applyChangesButton.ForeColor = Color.WhiteSmoke;
             applyChangesButton.Location = new Point(101, 279);
             applyChangesButton.Name = "applyChangesButton";
             applyChangesButton.Size = new Size(131, 26);
@@ -225,7 +225,7 @@ namespace SettingsWindow
             // 
             serverToPingTextBox.BackColor = Color.FromArgb(52, 54, 56);
             serverToPingTextBox.BorderStyle = BorderStyle.FixedSingle;
-            serverToPingTextBox.ForeColor = SystemColors.InactiveCaption;
+            serverToPingTextBox.ForeColor = Color.WhiteSmoke;
             serverToPingTextBox.Location = new Point(181, 144);
             serverToPingTextBox.Name = "serverToPingTextBox";
             serverToPingTextBox.Size = new Size(129, 23);
@@ -296,6 +296,7 @@ namespace SettingsWindow
             // 
             togglePanelsButton.BackColor = Color.FromArgb(31, 106, 165);
             togglePanelsButton.FlatStyle = FlatStyle.Popup;
+            togglePanelsButton.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             togglePanelsButton.ForeColor = SystemColors.Control;
             togglePanelsButton.Location = new Point(122, 2);
             togglePanelsButton.Name = "togglePanelsButton";
@@ -311,8 +312,8 @@ namespace SettingsWindow
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(350, 342);
             Controls.Add(togglePanelsButton);
-            Controls.Add(additionalPanel);
             Controls.Add(settingsPanel);
+            Controls.Add(additionalPanel);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
