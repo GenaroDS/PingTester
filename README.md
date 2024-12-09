@@ -14,6 +14,7 @@ The system tray icon changes color based on connection stability:
 Colors represent different packet loss percentages: blue (<9%), green (<18%), yellow (<28%), and red (>=28%).  
 Through the settings window, you can customize each threshold to your preference.  
 The clock icon appears initially, awaiting results.
+Once you click on settings, the settings windows pops-up. Here you can change the test parameters and see the pings on the console.
 
 <img src="Screenshots/Parameters.png" alt="Parameters">&nbsp;&nbsp;
 <img src="Screenshots/Console.png" alt="Console">
