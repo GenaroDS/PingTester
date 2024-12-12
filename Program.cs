@@ -16,29 +16,39 @@ namespace PingTester
 
         static void Main(string[] args)
         {
-            Application.SetHighDpiMode(HighDpiMode.SystemAware);
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            var settings = ReadSettings();
-            SetInitialTooltip(settings);
+            bool isNewInstance;
+            using (Mutex mutex = new Mutex(true, "PingTester", out isNewInstance))
+            {
+                if (!isNewInstance)
+                {
+                    // Si ya hay una instancia en ejecución, salir sin mostrar mensaje
+                    return;
+                }
 
-            trayIcon.ContextMenuStrip = new ContextMenuStrip();
-            trayIcon.ContextMenuStrip.Renderer = new DarkModeRenderer();
-            trayIcon.ContextMenuStrip.ShowImageMargin = false;
-            trayIcon.ContextMenuStrip.Items.Add("Settings", null, onSettingsClick);
-            trayIcon.ContextMenuStrip.Items.Add("Like the app? Buy me a coffee!", null, onCoffeeClick);
-            
+                Application.SetHighDpiMode(HighDpiMode.SystemAware);
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
 
-            trayIcon.ContextMenuStrip.Items.Add(new ToolStripSeparator());
-            trayIcon.ContextMenuStrip.Items.Add("Exit", null, OnExitClick);
+                var settings = ReadSettings();
+                SetInitialTooltip(settings);
 
-            var pingTestThread = new Thread(PingTest);
-            pingTestThread.IsBackground = true;
-            pingTestThread.Start();
+                trayIcon.ContextMenuStrip = new ContextMenuStrip();
+                trayIcon.ContextMenuStrip.Renderer = new DarkModeRenderer();
+                trayIcon.ContextMenuStrip.ShowImageMargin = false;
+                trayIcon.ContextMenuStrip.Items.Add("Settings", null, onSettingsClick);
+                trayIcon.ContextMenuStrip.Items.Add("Like the app? Buy me a coffee!", null, onCoffeeClick);
+                trayIcon.ContextMenuStrip.Items.Add(new ToolStripSeparator());
+                trayIcon.ContextMenuStrip.Items.Add("Exit", null, OnExitClick);
 
-            Application.Run();
+                var pingTestThread = new Thread(PingTest)
+                {
+                    IsBackground = true
+                };
+                pingTestThread.Start();
+
+                Application.Run();
+            }
         }
-
         static void SetInitialTooltip(Settings settings)
         {
             
